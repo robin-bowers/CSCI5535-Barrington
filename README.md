@@ -20,12 +20,12 @@ The class NC contains all circuits of gates with constant fan-in, regardless of 
 
 The class BWBP-5 consists of circuits of depth $poly(n)$, where each level has constant width of at most 5 gates.
 
-These circuits are equivalent to poly-depth _permutation programs_ on $\mathbb{Z}_5$, which consist of a set of permutations $P$ of the integrers $\{1, 2, 3, 4, 5\}$ and a sequence of instructions of the form 
-$$ <i, f, g>,$$
+These circuits are equivalent to poly-depth permutation programs on $\mathbb{Z}_5$, which consist of a set of permutations $P$ of the integrers $\{1, 2, 3, 4, 5\}$ and a sequence of instructions of the form 
+$ <i, f, g>,$
 where $i$ is an input bit index and $f, g\in S_5$ are permutations of the integers $\{1, 2, 3, 4, 5\}$. 
 Each instruction is read as "if input bit $x_{i}$ is 1, compose permutation $f$ with the previously-computed function $\sigma$, and if $x_i = 0$ compose $g$ with $\sigma$".
 
-The output of a sequence of instructions $<i_1, f_1, g_1>, <i_2, f_2, g_>, \dots, <i_k, f_k, g_k>$ will be a permutation looking something like
+The output of a sequence of instructions $<i_1, f_1, g_1>, <i_2, f_2, g_2>, \dots, <i_k, f_k, g_k>$ will be a permutation looking something like
 $$ f_k \circ g_{k-1} \circ g_{k-2}\circ\cdots\circ f_1.$$
 If the output permutation of a sequence of $n$ instructions $\mathcal{I}$ evaluated on a given input string $x$ is a member of $P$, then we say that $\mathcal{I}$ _recognizes_ $x$, that is, $x$ is a member of the language accepted by $\mathcal{I}$. 
 
